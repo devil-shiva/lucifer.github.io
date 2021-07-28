@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation li{
+    list-style: none;
+    padding: 1em;
+    transition: all 0.5s;
+}
+.navigation li:hover{
+    background-color: #ff2e6248;
+}
+.navigation li a{
+    text-decoration: none;
+    color: #FF2E63;
+    font-size: larger;
+    font-family: monospace;
+    font-weight: bolder;
+}
+.scroller{
+    scroll-snap-type: y mandatory;
+    overflow:scroll;
+    height: 100vh;
+
+}
+.scroller section{
+    scroll-snap-align: start;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    overflow: auto;
+}
+.logo img{
+    width: 2em;
+    height: 2em;
+}
+.page1 span{
+    position: relative;
+    font-family: monospace;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 16em;
+    border-right: 2px solid red;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    animation: typing 5s steps(27) 1s 1 normal both ,
+    blinking .75s steps(27) infinite;
+    color: #FF2E63;
+}
+.page1{
+    font-size: x-large;
+    background-color: #222831;
+}
+.container h5{
+    font-family: sans-serif;
+    margin-top: 1em;
+    overflow: hidden;
+    animation: popup 1s  5.5s 1 normal both;
+    color: #EEEEEE;
+    
+}
+.page2{
+    background-color: #364F6B;
+    color: #EEEEEE;
+    padding: 1em;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-size: larger;
+    background-color: #ff2e6280;
+    width: 15em;
+    margin-top: 1em;
+}
+.box a{
+    text-decoration: none;
+    color: #01fffb;
+}
+.tosite{ 
+    padding:.5em 5px;
+    background-color: #FF2E63;
+    width: max-content;
+}
+.tosite a{
+    color: #EEEEEE;
+}
+.page3{
+    background-color: #2B2E4A;
+}
+.page3 h2{
+    color: #FF2E63;
+
+}
+.page3 .box{
+    background-color: #01fffb71;
+    color: #EEEEEE;
+}
+.page3 .box .tosite a{
+    color: #EEEEEE;
+}
+.page3 .box a{
+    color: #FF2E63;
+}
+.page4{
+    background-color: #311D3F;
+}
+.page4 h2{
+    color: #96898b;
+}
+
+.page5{
+    text-align: center;
+    background-color: #155263;
+}
+.pan{
+    position: relative;
+    margin: 1em;
+}
+.page5 h2{
+    color: #E23E57;
+}
+.pan {
+    width: 10em;
+    height: 8em;
+    opacity: 0.5;
+    overflow: hidden;
+}
+.pan img{
+    width: 10em;
+    height: 8em;
+    transition: all .5s;
+}
+.pan img:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+.pan span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #2228317e;
+    
+}
+.pan span a{
+    color: #00ff9d;
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page6{
+    background-color: #A6FFF2;
+}
+.socialsites{
+    margin-top: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.socialbox{
+    position: relative;
+    padding: 1em;
+    width: 10em;
+    background-color: #ff004052;
+    cursor: pointer;
+    margin: .5em;
+    text-align: center;
+}
+.socialbox span:nth-child(2){
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: rgb(75, 245, 7);
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    z-index: -1;
+   
+}
+.socialbox:hover>span:nth-child(2){
+    height: 3em;
+}
+.socialbox span a{
+    color: #A6FFF2;
+    z-index: 1;
+}
+
+@keyframes popup {
+    from{
+        max-height: 0;
+        margin-top: 3em;
+    }
+    to{
+        max-height: 2em;
+        margin-top: 1em;
+    }
+    
+}
+@keyframes blinking {
+    from{
+        border-right-color: red;
+    }
+    to{
+        border-right-color:transparent;
+        
+    }
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 16em;
+    }
+}
